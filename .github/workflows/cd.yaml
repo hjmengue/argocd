@@ -1,19 +1,19 @@
 name: CD
 on:
   push:
-    branch: [main]
-  jobs:
-    build:
-      name: build
-      runs-on: ubuntu-latest
-      steps:
-        - name: checkout
-          uses: actions/checkout@v2
+    branches: [main]
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
 
-        - name: build image and push to docker hub
-          uses: docker/build-push-action@1.1.0
-          with:
-            username: hjmengue
-            password: ${{ secrets.DOCKER_PASSWORD }}
-            repository: hjmengue/arcocd
-            tags: ${{ github.sha }}, latest
+      - name: build image and push to docker hub
+        uses: docker/build-push-action@1.1.0
+        with:
+          username: hjmengue
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: hjmengue/arcocd
+          tags: ${{ github.sha }}, latest
