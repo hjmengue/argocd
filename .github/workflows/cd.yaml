@@ -4,7 +4,7 @@ on:
     branches: [main]
 jobs:
   build:
-    name: build
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -40,7 +40,7 @@ jobs:
       - name: commit
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.user "Deploy Action"
+          git config --local user.name "Deploy Action"
           git commit -am "change image tag"
 
       - name: push
