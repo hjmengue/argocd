@@ -9,4 +9,4 @@ namespace: goapp
 images:
 - name: goapp
   newName: hjmengue/argocd
-  newTag: bda453ad2d4259a72fcd87431a89562a2c75c382
+  newTag: 661c5f0b642622dffe748c35ebb4079ec95b3877
