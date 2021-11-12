@@ -15,7 +15,7 @@ jobs:
         with:
           username: hjmengue
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: hjmengue/arcocd
+          repository: hjmengue/argocd
           tags: ${{ github.sha }}, latest
 
   deploy:
