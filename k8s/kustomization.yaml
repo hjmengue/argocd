@@ -8,5 +8,4 @@ namespace: goapp
 
 images:
   - name: goapp
-    newName: goapp
-    newTag: v1
+    newName: hjmengue/argocd
